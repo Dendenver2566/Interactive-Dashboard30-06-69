@@ -181,7 +181,7 @@ const budgetData = [
     { month: 'มี.ค.69',  งบประมาณ: 364288.75, จัดสรร: 273216.56, เบิกจ่าย: 208003.79 },
     { month: 'เม.ย.69',  งบประมาณ: 364288.75, จัดสรร: 273726.38, เบิกจ่าย: 241722.48 },
     { month: 'พ.ค.69',  งบประมาณ: 364288.75, จัดสรร: 364288.75, เบิกจ่าย: 274726.38 },
-        { month: 'มิ.ย.69',   งบประมาณ: 364288.75, จัดสรร: 364288.75, เบิกจ่าย: 309681.64 },
+    { month: 'มิ.ย.69',  งบประมาณ: 364288.75, จัดสรร: 364288.75, เบิกจ่าย: 309681.64 },
 ];
 const pensionData = [
     { name: 'เบี้ยหวัด',    count: 5900,   amount: 79.75 },
@@ -534,8 +534,8 @@ const App = () => {
                                     <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12, marginBottom:16 }}>
                                         {[
                                             { label:'วงเงินงบประมาณ', val: budgetData[0].งบประมาณ, color:'#1e40af', bg:'#eff6ff' },
-                                            { label:'วงเงินจัดสรร', val: budgetData[0].จัดสรร, color:'#0891b2', bg:'#e0f7ff' },
-                                            { label:'เบิกจ่ายสะสม (มิ.ย.69)', val: budgetData[4].เบิกจ่าย, color:'#059669', bg:'#ecfdf5' },
+                                            { label:'วงเงินจัดสรร', val: budgetData[budgetData.length-1].จัดสรร, color:'#0891b2', bg:'#e0f7ff' },
+                                            { label:'เบิกจ่ายสะสม (มิ.ย.69)', val: budgetData[budgetData.length-1].เบิกจ่าย, color:'#059669', bg:'#ecfdf5' },
                                         ].map((k,i) => (
                                             <div key={i} style={{ background:k.bg, border:`1px solid ${k.color}22`, borderRadius:12, padding:'14px 18px' }}>
                                                 <div style={{ fontSize:12, color:'#64748b', marginBottom:4 }}>{k.label}</div>
